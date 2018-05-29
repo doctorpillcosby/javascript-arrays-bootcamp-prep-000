@@ -1,39 +1,41 @@
-var chocolateBars = ["snickers", "hundred grand", "kitkat", "skittles"];
+var chocolateBars = ["snickers", "hundred grand", "kitkat", "skittles"]
 
-function addElementToBeginningOfArray(array, element){
-  var array = "foo"
-  var element = 1
-return [array, element]
-  var new_array = [element, array[0]]
-  return new_array
- }
-function destructivelyAddElementToBeginningOfArray(array, element){
- 
-return array, element}
-function destructivelyAddElementToBeginningOfArray(array, element){
+function addElementToBeginningOfArray(array, element) {
+  return [element, ...array]
+}
+
+function destructivelyAddElementToBeginningOfArray(array, element) {
   array.unshift(element)
   return array
 }
 
-function addElementToEndOfArray(array, element){
+function addElementToEndOfArray(array, element) {
+  return [...array, element]
+}
+
+function destructivelyAddElementToEndOfArray(array, element) {
   array.push(element)
   return array
 }
-function destructivelyAddElementToEndOfArray(array, element){
-  array.push(element)
-  return array
-}
-function accessElementInArray(array, index){
- 
-  return array[2]
-}
-function removeElementFromBeginningOfArray(array){
+
+function destructivelyRemoveElementFromBeginningOfArray(array) {
   array.shift()
+  array
+}
+
+function removeElementFromBeginningOfArray(array) {
+  return array.slice(1)
+}
+
+function destructivelyRemoveElementFromEndOfArray(array) {
+  array.pop()
   return array
 }
-function removeElementFromEndOfArray(array){
- array.pop()
-  return array
- }
-  
-  
+
+function removeElementFromEndOfArray(array) {
+  return array.slice(0, array.length - 1)
+}
+
+function accessElementInArray(array, index) {
+  return array[index]
+}
