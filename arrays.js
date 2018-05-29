@@ -7,10 +7,10 @@ return [array, element]
   var new_array = [element, array[0]]
   return new_array
  }
-function descructivelyAddElementToBeginningOfArray(array, element){
+function destructivelyAddElementToBeginningOfArray(array, element){
  
 return array, element}
-function descructivelyAddElementToBeginningOfArray(array, element){
+function destructivelyAddElementToBeginningOfArray(array, element){
   array.unshift(element)
   return array
 }
